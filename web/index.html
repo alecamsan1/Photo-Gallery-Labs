@@ -2,95 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Example page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  
+  <!-- Estilos -->
   <link rel="icon" href="/images/favicon.ico" />
   <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/font-awesome.min.css" />
+  
+  <!-- Scripts -->
   <script src="/js/utils/include.js"></script>
+  <script src="/js/libs/bootstrap.min.js"></script>
 </head>
 
 <body class="dark">
   <!-- CABECERA CARGADA DINÁMICAMENTE -->
   <div id="page-header"></div>
-
   <script>
     include("header.html", "#page-header");
   </script>
 
   <!-- CONTENIDO PRINCIPAL -->
-  <h2>Recent pictures</h2>
-  <a href="upload_picture.html">Upload a new picture</a>
+  <div class="container">
+    <div class="row text-center my-4">
+      <!-- Imagen con enlace a photo_detail.html -->
+      <div class="col-md-4">
+        <a href="photo_detail.html">
+          <div class="card bg-dark text-light">
+            <img src="https://i.ibb.co/tY1Jcnc/wlZCfCv.jpg" class="card-img-top" alt="Samoyed">
+            <div class="card-body">
+              <h5 class="card-title text-center">Samoyed</h5>
+              <p class="card-text">A very good boy.</p>
+              <p class="text-end">@user1</p>
+            </div>
+          </div>
+        </a>
+      </div>
 
- <div class="title-block">
-    <h1 id="title">Photo Gallery</h1>
-    <h3 id="subtitle">IISSI-2 - University of Seville</h3>
-  <div class="navigation">
-    <a href="index.html">Recent photos</a>
-    <a href="register.html">Register</a>
-    <a href="login.html">Login</a>
-  </div>
- </div>
-
-  <div class="gallery-container">
-    <!-- BLOQUE 1: Samoyed -->
-    <div class="photo-block">
-      <div class="photo-header-block">
-        <h2 class="photo-title">Samoyed</h2>
-        <h3 class="photo-score">Score: 4.52</h3>
-      </div>
-      <div class="photo-image-block">
-        <img class="photo-image" src="https://i.ibb.co/tY1Jcnc/wlZCfCv.jpg" alt="Samoyed" />
-      </div>
-      <div class="photo-metadata-block">
-        <p class="photo-description">A very good boy.</p>
-      </div>
-      <div class="photo-edit-block">
-        <button>Edit this photo</button>
-        <button>Delete this photo</button>
-      </div>
+      <!-- Otros espacios de imagen -->
+      <div class="col-md-4">Photo 2 goes here</div>
+      <div class="col-md-4">Photo 3 goes here</div>
     </div>
 
-    <!-- BLOQUE 2: Placeholder -->
-    <div class="photo-block">
-      <div class="photo-header-block">
-        <h2 class="photo-title">Placeholder</h2>
-        <h3 class="photo-score">Score: 3.00</h3>
-      </div>
-      <div class="photo-image-block">
-        <img class="photo-image" src="images/placeholder-img.jpg" alt="Placeholder image" />
-      </div>
-      <div class="photo-metadata-block">
-        <p class="photo-description">Default placeholder image.</p>
-      </div>
-      <div class="photo-edit-block">
-        <button>Edit this photo</button>
-        <button>Delete this photo</button>
-      </div>
-    </div>
-
-    <!-- BLOQUE 3: Tortilla Española -->
-    <div class="photo-block">
-      <div class="photo-header-block">
-        <h2 class="photo-title">Tortilla Española</h2>
-        <h3 class="photo-score">Score: 4.80</h3>
-      </div>
-      <div class="photo-image-block">
-        <img class="photo-image" src="images/tortillaEspañola.jpg" alt="Tortilla Española" />
-      </div>
-      <div class="photo-metadata-block">
-        <p class="photo-description">La auténtica tortilla de patatas.</p>
-      </div>
-      <div class="photo-edit-block">
-        <button>Edit this photo</button>
-        <button>Delete this photo</button>
+    <div class="row">
+      <div class="col text-center">
+        <a href="register.html" class="btn btn-secondary mt-4">Go to register.html</a>
       </div>
     </div>
   </div>
-
-  <a href="register.html">Go to register.html</a>
 </body>
 </html>
-
-
-
-
