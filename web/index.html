@@ -1,61 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Example page</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  
-  <!-- Estilos -->
-  <link rel="icon" href="/images/favicon.ico" />
-  <link rel="stylesheet" href="/css/style.css" />
-  <link rel="stylesheet" href="/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="/css/font-awesome.min.css" />
-  
-  
-  <!-- Scripts -->
-  <script src="/js/utils/include.js"></script>
-  <script src="/js/libs/bootstrap.min.js"></script>
-  
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>My PhotoGallery</title>
+    
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    
+    <script src="/js/libs/bootstrap.min.js"></script>
+    <script src="/js/utils/include.js"></script>
+    <script src="/js/index.js" type="module"></script>
+    <script src="/js/libs/axios.min.js"></script>
+    <script src="/js/header.js" type="module"></script>
 </head>
 
 <body class="dark">
-  <!-- CABECERA CARGADA DINÁMICAMENTE -->
-  <div id="page-header"></div>
-  <script>
-    include("header.html", "#page-header");
-  </script>
-
-  <!-- CONTENIDO PRINCIPAL -->
-  <div class="container">
-  <h1 id="title">Photo Gallery <i class="fa fa-file-image-o" aria-hidden="true"></i></h1> 
-
-  <div class="row text-center my-4">
-    <!-- Imagen fija con enlace -->
-    <div class="col-md-4">
-      <a href="photo_detail.html">
-        <div class="card bg-dark text-light">
-          <img src="https://i.ibb.co/tY1Jcnc/wlZCfCv.jpg" class="card-img-top" alt="Samoyed">
-          <div class="card-body">
-            <h5 class="card-title text-center">Samoyed</h5>
-            <p class="card-text">A very good boy.</p>
-            <p class="text-end">@user1</p>
-          </div>
+    <div id="page-header"></div>
+    <div id="errors"></div>
+    
+    <div class="container" id="gallery">
+        <div class="row text-center">
+            <div class="col-md">
+               <h2> Recent Pictures</h2>
+            </div>
         </div>
-      </a>
+        <div class="row text-center">
+           
+        </div>
+        <div class="row text-center">
+            <button id="btnFecha" class="btn btn-primary">Show date</button>
+        </div>
     </div>
-  </div>
+    
 
-  <!-- Aquí se añadirán dinámicamente otras tarjetas -->
-  <div id="gallery" class="row text-center my-4"></div>
-
-  <div class="row">
-    <div class="col text-center">
-      <a href="register.html" class="btn btn-secondary mt-4">Go to register.html</a>
-    </div>
-  </div>
-</div>
-<button class="btn btn-primary" id="test-button">Press me!</button>
-<script src="js/index.js" type="module"></script>
+    <script>
+        include("header.html", "#page-header");
+    </script>
 </body>
+
 </html>

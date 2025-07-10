@@ -1,14 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User registration</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script src="/js/utils/include.js"></script>
+    <script src="js/libs/bootstrap.min.js"></script>
     <script src="js/register.js" type="module"></script>
+    <script src="js/libs/axios.min.js"></script>
+    <script src="/js/header.js" type="module"></script>
 </head>
-<body>
-    <form id="register-form">
 
-</form>
+<body class="dark">
+    <!-- Aqui deberia ir la cabecera-->
+    <div id="page-header"></div>
+    <div id="errors"></div>
+
+
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md">
+                <h2>Register a new user</h2>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-lg" id="formContainer">
+                <form id="register-form">
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label for="firstname-input">First name:</label>
+                                <input type="text" class="form-control bg-dark text-light" id="firstname-input" name="firstName"
+                                    placeholder="First name">
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label for="lastname-input">Last name:</label>
+                                <input type="text" class="form-control bg-dark text-light" id="lastname-input" name="lastName"
+                                    placeholder="Last name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label for="email-input">Email:</label>
+                                <input type="email" class="form-control bg-dark text-light" id="email-input" name="email"
+                                    placeholder="Type your email">
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label for="phone-input">Phone number:</label>
+                                <input type="text" class="form-control bg-dark text-light" id="phone-input" name="telephone"
+                                    placeholder="Phone number">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label for="username-input">Username:</label>
+                                <input type="text" class="form-control bg-dark text-light" id="username-input" name="username"
+                                    placeholder="Username">
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label for="passwd-input">Password:</label>
+                                <input type="password" class="form-control bg-dark text-light" id="passwd-input" name="password"
+                                    placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label for="passwd2-input">Password:</label>
+                                <input type="password" class="form-control bg-dark text-light" id="passwd2-input" name="password2"
+                                    placeholder="Repeat your password">
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md text-center">
+                            <button type="submit" class="btn btn-info">Register</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        include("header.html", "#page-header");
+    </script>
 </body>
+
 </html>
-
-

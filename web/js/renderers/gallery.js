@@ -1,28 +1,27 @@
-"use strict";
+'use strict';
 
-import { photoRenderer } from "/js/renderers/photos.js";
-import { parseHTML } from "/js/utils/parseHTML.js";
+import { parseHTML } from "../utils/parseHTML.js";
+import { photoRenderer } from "./photos.js";
 
 const galleryRenderer = {
-  asCardGallery: function (photos) {
-    let galleryContainer = parseHTML('<div class="container"></div>');
-    let row = parseHTML('<div class="row"></div>');
-    galleryContainer.appendChild(row);
-
-    let counter = 0;
-    for (let photo of photos) {
-      let card = photoRenderer.asCard(photo);
-      row.appendChild(card);
-      counter++;
-
-      if (counter % 3 === 0 && counter < photos.length) {
-        row = parseHTML('<div class="row mt-4"></div>');
+    asCardGallery: function (photos) {
+        let galleryContainer = parseHTML('<div class="photo-gallery"></div>');
+        let row = parseHTML('<div class="row"></div>');
         galleryContainer.appendChild(row);
-      }
-    }
 
-    return galleryContainer;
-  }
+        let counter = 0;
+
+        for (let photo of photos) {
+            let card = photoRenderer.asCard(photo);
+            row.appendChild(card);
+            counter += 1;
+            if (counter % 3 === 0) {
+                row = parseHTML('<div class="row"></div>');
+                galleryContainer.appendChild(row);
+            }
+        }
+        return galleryContainer;
+    }
 };
 
 export { galleryRenderer };

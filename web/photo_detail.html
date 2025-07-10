@@ -1,32 +1,74 @@
-<div class="row text-center">
-    <div class="col-md">
-        <h3>Samoyed</h3>
-        <h6>A very good boy</h6>
-        <p>Uploaded by <a href="user_profile.html">User 1</a> on 12/01/2021</p>
-        <hr>
-        <img src="https://i.ibb.co/tY1Jcnc/wlZCfCv.jpg" class="img-fluid">
-    </div>
-    
-    <div class="col-md-3">
-        <div>
-            <button class="btn btn-primary">Edit this photo</button>
-            <button class="btn btn-danger">Delete this photo</button>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>My PhotoGallery</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="/js/utils/include.js"></script>
+    <script src="/js/photo_detail.js" type="module"></script>
+    <script src="/js/libs/axios.min.js"></script>
+    <script src="/js/header.js" type="module"></script>
+</head>
+
+<body class="dark">
+    <!-- Aqui deberia ir la cabecera-->
+    <div id="page-header"></div>
+    <div id="errors">  </div>
+
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-9" id="photo-details-column">
+                <!-- aqui cargaremos el contenido que produzca el renderer de foto-->
+            </div>
+            <div class="col-md-3" id="actions-col">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <button id="button-edit" class="btn btn-primary">
+                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                                Edit this photo
+                            </button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button id="button-delete" class="btn btn-danger">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                Delete this photo
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <form>
+                            <div class="form-group">
+                                <label for="rating-input">Rate this photo:</label>
+                                <select id="rating-input" name="rating" class="form-control">
+                                    <option value="1">*</option>
+                                    <option value="2">**</option>
+                                    <option value="3">***</option>
+                                    <option value="4">****</option>
+                                    <option value="5">*****</option>
+                                </select>
+                                <button type="submit" class="btn btn-success">Rate</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-md">
+                <a href="index.html" class="btn btn-info"><i class="fa fa-undo" aria-hidden="true"></i> Return to the gallery</a>
+            </div>
         </div>
     </div>
-    <form>
-        <div class="form-group">
-            <label for="rating-input">Rate this photo:</label>
-                <select id="rating-input" name="rating" class="form-control">
-                <option value="1">*</option>
-                <option value="2">**</option>
-                <option value="3">***</option>
-                <option value="4">****</option>
-                <option value="5">*****</option>
-        </select>
-        <button type="submit" class="btn btn-success">Rate</button>
-        </div>
-    </form>
-    <a href="index.html" class="btn btn-primary">Return to the gallery</a>
-</div>
-
-
+    <script>
+        include("header.html", "#page-header");
+    </script>
+</body>
