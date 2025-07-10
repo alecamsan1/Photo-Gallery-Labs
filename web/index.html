@@ -11,9 +11,12 @@
   <link rel="stylesheet" href="/css/bootstrap.min.css" />
   <link rel="stylesheet" href="/css/font-awesome.min.css" />
   
+  
   <!-- Scripts -->
   <script src="/js/utils/include.js"></script>
   <script src="/js/libs/bootstrap.min.js"></script>
+  <script src="js/index.js" type="module"></script>
+  
 </head>
 
 <body class="dark">
@@ -25,31 +28,32 @@
 
   <!-- CONTENIDO PRINCIPAL -->
   <div class="container">
-    <div class="row text-center my-4">
-      <!-- Imagen con enlace a photo_detail.html -->
-      <div class="col-md-4">
-        <a href="photo_detail.html">
-          <div class="card bg-dark text-light">
-            <img src="https://i.ibb.co/tY1Jcnc/wlZCfCv.jpg" class="card-img-top" alt="Samoyed">
-            <div class="card-body">
-              <h5 class="card-title text-center">Samoyed</h5>
-              <p class="card-text">A very good boy.</p>
-              <p class="text-end">@user1</p>
-            </div>
+  <h1 id="title">Photo Gallery <i class="fa fa-file-image-o" aria-hidden="true"></i></h1> 
+
+  <div class="row text-center my-4">
+    <!-- Imagen fija con enlace -->
+    <div class="col-md-4">
+      <a href="photo_detail.html">
+        <div class="card bg-dark text-light">
+          <img src="https://i.ibb.co/tY1Jcnc/wlZCfCv.jpg" class="card-img-top" alt="Samoyed">
+          <div class="card-body">
+            <h5 class="card-title text-center">Samoyed</h5>
+            <p class="card-text">A very good boy.</p>
+            <p class="text-end">@user1</p>
           </div>
-        </a>
-      </div>
-
-      <!-- Otros espacios de imagen -->
-      <div class="col-md-4">Photo 2 goes here</div>
-      <div class="col-md-4">Photo 3 goes here</div>
-    </div>
-
-    <div class="row">
-      <div class="col text-center">
-        <a href="register.html" class="btn btn-secondary mt-4">Go to register.html</a>
-      </div>
+        </div>
+      </a>
     </div>
   </div>
+
+  <!-- Aquí se añadirán dinámicamente otras tarjetas -->
+  <div id="gallery" class="row text-center my-4"></div>
+
+  <div class="row">
+    <div class="col text-center">
+      <a href="register.html" class="btn btn-secondary mt-4">Go to register.html</a>
+    </div>
+  </div>
+</div>
 </body>
 </html>
