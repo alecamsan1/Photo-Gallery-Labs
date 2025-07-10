@@ -3,6 +3,15 @@
 import { galleryRenderer } from "/js/renderers/gallery.js";
 
 function main() {
+  let button = document.getElementById("test-button");
+    
+    let cards = document.querySelectorAll("div.card");
+    for (let card of cards) {
+    card.onmouseenter = handleMouseEnter;
+    card.onmouseleave = handleMouseLeave;
+    }
+    
+    button.onclick = clickHandler;
   let container = document.getElementById("gallery");
 
   let photos = [
@@ -38,6 +47,19 @@ function main() {
 
   let gallery = galleryRenderer.asCardGallery(photos);
   container.appendChild(gallery);
+}
+function clickHandler(event) {
+    let target = event.target;
+    let text = target.textContent;
+    alert(text);
+}
+function handleMouseEnter(event) {
+    let card = event.target;
+    card.style.border = "2px solid blue"
+    }
+    function handleMouseLeave(event) {
+    let card = event.target;
+    card.style.border = "none";
 }
 
 document.addEventListener("DOMContentLoaded", main);
